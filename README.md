@@ -1,6 +1,13 @@
 # Omarchy Sapphire Theme - Complete Setup
 
-This repository contains my complete Omarchy desktop environment configuration using the Sapphire theme. It includes everything from Hyprland window manager configuration to terminal emulator theming, waybar styling, and more.
+This repository contains my complete Omarchy desktop environment configuration using the Sapphire theme with custom modifications. It includes everything from Hyprland window manager configuration to terminal emulator theming, custom waybar styling, and more.
+
+## What Makes This Different
+
+This is a customized fork of the original Sapphire theme with:
+- **Custom Waybar configuration** - Bottom-positioned bar with personalized module layout and styling
+- **Complete working setup** - All configuration files needed for a full desktop environment
+- **Ready to use** - Pre-configured and tested on my system
 
 ## About Sapphire Theme
 
@@ -47,9 +54,9 @@ Complete Hyprland configuration including:
 - `hypridle.conf` - Idle management
 - `hyprsunset.conf` - Screen warming
 
-#### Waybar (`configs/waybar/`)
-- `config.jsonc` - Waybar module configuration
-- `style.css` - Waybar styling
+#### Waybar (`configs/waybar/`) - Custom Configuration
+- `config.jsonc` - Custom waybar module configuration (bottom-positioned with personalized layout)
+- `style.css` - Custom styling with rounded corners, custom spacing, and CaskaydiaMono Nerd Font
 
 #### Terminal Emulators
 - `configs/alacritty/alacritty.toml` - Alacritty main configuration
@@ -77,19 +84,19 @@ This setup requires the following packages:
 
 ### Install the Sapphire Theme
 
-To install just the Sapphire theme through Omarchy:
+To install this customized theme through Omarchy:
 
 ```bash
-omarchy-theme-install https://github.com/HANCORE-linux/omarchy-sapphire-theme.git
+omarchy-theme-install https://github.com/DanielCoffey1/omarchy-sapphire-theme.git
 ```
 
 ### Full Configuration Setup
 
-To replicate my complete setup:
+To replicate my complete setup with custom waybar:
 
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/omarchy-sapphire-theme.git
+   git clone https://github.com/DanielCoffey1/omarchy-sapphire-theme.git
    cd omarchy-sapphire-theme
    ```
 
@@ -182,6 +189,7 @@ omarchy-sapphire-theme/
 ## Credits
 
 - Original Sapphire theme by [HANCORE-linux](https://github.com/HANCORE-linux/omarchy-sapphire-theme)
+- Custom waybar configuration and modifications by DanielCoffey1
 - Omarchy desktop environment by the Omarchy team
 
 ## License
@@ -190,4 +198,4 @@ MIT
 
 ---
 
-**Note**: This is my personal configuration. You may need to adjust paths, monitor settings, and keybindings to match your setup.
+**Note**: This is my personal customized configuration. You may need to adjust paths, monitor settings, keybindings, and waybar modules to match your setup. The waybar configuration is specifically tailored to my preferences with bottom positioning and custom module layout.
