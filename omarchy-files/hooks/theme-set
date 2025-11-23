@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Omarchy hook: Update waybar colors with pywal when theme changes
+# This hook is called with the snake-cased name of the theme that has just been set.
+
+WALLPAPER="$HOME/.config/omarchy/current/background"
+
+# Check if pywal is installed
+if ! command -v wal &> /dev/null; then
+    # Silently exit if pywal is not installed
+    exit 0
+fi
+
+# Check if wallpaper exists
+if [ ! -f "$WALLPAPER" ]; then
+    exit 0
+fi
+
+# Generate colors with pywal
+# -n: Don't set wallpaper (Omarchy already handles this)
+# -q: Quiet mode
+wal -i "$WALLPAPER" -n -q 2>/dev/null
+
+# Reload waybar if it's running
+if pgrep -x waybar > /dev/null; then
+    killall -SIGUSR2 waybar 2>/dev/null
+fi
